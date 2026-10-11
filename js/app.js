@@ -4,7 +4,7 @@
   var CONFIG={
     FORM_ENDPOINT:'https://script.google.com/macros/s/AKfycbxxAbSts9-PPwv3uQpsvSqFiBoMgD1HXjS_3GVioNIDkRAtGBrzfCb3-nlsU-_c_AEGcw/exec',        // URL de la aplicación de Google Apps Script que recibe el formulario
     TURNSTILE_SITEKEY:'',    // clave pública de Cloudflare Turnstile (antispam)
-    GA_ID:'',                // Google Analytics 4, por ejemplo 'G-XXXXXXXXXX'
+    GA_ID:'G-1EW6MSPN20',                // Google Analytics 4, por ejemplo 'G-XXXXXXXXXX'
     META_PIXEL_ID:''         // Píxel de Meta, por ejemplo '123456789012345'
   };
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
