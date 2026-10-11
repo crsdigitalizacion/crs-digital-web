@@ -117,7 +117,13 @@
   (function(){
     var fab=document.getElementById('qaFab'),box=document.getElementById('qa'),log=document.getElementById('qaLog'),sug=document.getElementById('qaSug'),f=document.getElementById('qaF'),inp=document.getElementById('qaIn');
     if(!fab) return;
-    var WA={t:'WhatsApp',h:'https://wa.me/34642643134'},FORM={t:'Ir al formulario',h:'#formulario'},WORK={t:'Ver trabajos',h:'#proyectos'},SVC={t:'Ver servicios',h:'#servicios'};
+    (function(){var b=document.getElementById('wa-btn'),m=document.getElementById('wa-menu');if(!b||!m)return;
+      function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');}
+      b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden);});
+      document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))set(false);});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+      [].forEach.call(m.querySelectorAll('a'),function(a){a.addEventListener('click',function(){set(false);});});})();
+    var WA={t:'WhatsApp 642 64 31 34',h:'https://wa.me/34642643134'},WA2={t:'WhatsApp 657 71 96 47',h:'https://wa.me/34657719647'},FORM={t:'Ir al formulario',h:'#formulario'},WORK={t:'Ver trabajos',h:'#proyectos'},SVC={t:'Ver servicios',h:'#servicios'};
     var K=[
       {k:['hola','buenas','buenos dias','buenas tardes','hey'],a:'Hola. Pregúntame lo que quieras sobre webs, redes sociales, automatización o mantenimiento, o elige una de las preguntas de abajo.'},
       {k:['precio','precios','cuesta','cuanto vale','cuanto cobr','presupuesto','tarifa','caro','barato','pagar','coste','dinero'],a:'Cada negocio necesita algo distinto, así que preparamos un presupuesto a medida y sin compromiso. Cuéntanos qué necesitas en el formulario o por WhatsApp y te respondemos.',x:[FORM,WA]},
@@ -126,7 +132,7 @@
       {k:['redes','instagram','tiktok','facebook','publicacion','contenido','video','reels','seguidores','community'],a:'Nos ocupamos de tus redes: publicaciones, vídeos y estrategia para que tu negocio se vea cada semana y te encuentren en tu ciudad.',x:[FORM]},
       {k:['automatiz','automatic','chatbot','bot','respuestas','avisos','contactos','repetitiv'],a:'Automatizamos tareas repetitivas como respuestas, avisos y gestión de contactos, para que ganes tiempo y no se te escape ningún cliente. Esta misma burbuja es un ejemplo sencillo.',x:[FORM]},
       {k:['mantenimiento','cambios','actualiz','soporte','despues','arreglar','modificar','publicada','ya esta','una vez hecha','una vez publicada','que pasa despues'],a:'Después de publicar seguimos contigo: hacemos cambios, actualizaciones y damos soporte para que tu web esté siempre al día sin que tengas que tocar nada técnico.'},
-      {k:['tarda','tiempo','plazo','cuando','rapido','dias','semanas','urgente'],a:'Depende de lo que necesites. Cuando hablemos te damos un plazo claro antes de empezar.',x:[WA]},
+      {k:['tarda','tiempo','plazo','cuando','rapido','dias','semanas','urgente'],a:'Depende de lo que necesites. Cuando hablemos te damos un plazo claro antes de empezar.',x:[WA,WA2]},
       {k:['donde','logrono','rioja','espana','ciudad','online','zona','presencial','fuera','madrid','barcelona','oficina'],a:'Estamos en Logroño y trabajamos online con negocios de toda España.'},
       {k:['como funciona','proceso','pasos','empezar','como trabaj','como se hace'],a:'Son cuatro pasos: hablamos de lo que necesitas, te preparamos una propuesta para que la veas, publicamos tu web y arrancamos tus redes, y después te acompañamos con el mantenimiento.'},
       {k:['ver antes','verla','antes de decidir','antes de pagar','antes de empezar','ver como','quedara','como queda','ver el diseno','decidir','propuesta','boceto','muestra','prueba','gustar','no me gusta','no me convence'],a:'Sí, siempre. Antes de empezar te preparamos una propuesta con el diseño y el estilo de tu negocio para que la veas con calma. Si quieres cambiar algo, lo ajustamos contigo, y solo seguimos adelante cuando te convenza.'},
@@ -134,16 +140,16 @@
       {k:['compromiso','comprometo','compromet','obliga','gratis','sin coste','permanencia'],a:'Escribirnos no te compromete a nada. Primero hablamos y luego decides con calma.',x:[FORM]},
       {k:['no se','tecnolog','tecnic','dificil','entiendo','informatic','mayor'],a:'No hace falta que sepas de tecnología. Te lo explicamos todo claro y nos ocupamos nosotros de la parte técnica.'},
       {k:['dominio','hosting','alojamiento','publicar','servidor','correo corporativo'],a:'Nos ocupamos de dejar tu web publicada y funcionando. Los detalles de dominio y alojamiento los vemos contigo cuando hablemos.',x:[FORM]},
-      {k:['contacto','telefono','llamar','whatsapp','correo','email','mail','hablar','escribir','numero'],a:'Puedes llamarnos o escribirnos por WhatsApp al +34 642 64 31 34 o al +34 657 71 96 47, o por correo a crsdigitalizacion@gmail.com.',x:[WA,FORM]},
+      {k:['contacto','telefono','llamar','whatsapp','correo','email','mail','hablar','escribir','numero'],a:'Puedes llamarnos o escribirnos por WhatsApp al +34 642 64 31 34 o al +34 657 71 96 47, o por correo a crsdigitalizacion@gmail.com.',x:[WA,WA2,FORM]},
       {k:['quien','quienes','equipo','sois','empresa'],a:'Somos CRS Digital, un equipo de Logroño. Llevamos tu web y tus redes con la misma imagen y siempre hablas con quien conoce tu negocio.'},
-      {k:['gracias','genial','perfecto','vale','ok'],a:'A ti. Si quieres que lo veamos para tu negocio, escríbenos cuando quieras.',x:[WA,FORM]}
+      {k:['gracias','genial','perfecto','vale','ok'],a:'A ti. Si quieres que lo veamos para tu negocio, escríbenos cuando quieras.',x:[WA,WA2,FORM]}
     ];
     var S=['¿Cuánto cuesta una web?','¿Qué servicios ofrecéis?','¿Cuánto se tarda?','¿Trabajáis fuera de Logroño?','¿Puedo verla antes de decidir?','¿Puedo ver ejemplos?'];
     function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[¿?¡!.,;:]/g,' ').replace(/\s+/g,' ').trim(); }
     function answer(q){
       var n=' '+norm(q)+' ',best=null,score=0;
       K.forEach(function(it){ var s=0; it.k.forEach(function(w){ var nw=norm(w); if(n.indexOf(nw)>-1) s+=nw.length; }); if(s>score){ score=s; best=it; } });
-      return best||{a:'Esa no la tengo preparada, pero te la contestamos nosotros. Escríbenos por WhatsApp o déjanos tu pregunta en el formulario.',x:[WA,FORM]};
+      return best||{a:'Esa no la tengo preparada, pero te la contestamos nosotros. Escríbenos por WhatsApp o déjanos tu pregunta en el formulario.',x:[WA,WA2,FORM]};
     }
     function add(text,who,acts){
       var m=document.createElement('div'); m.className='qm '+who; m.textContent=text;
@@ -256,7 +262,8 @@
     function showOk(demo,hasEmail){
       form.hidden=true; okBox.hidden=false;
       $('f-ok-demo').hidden=!demo;
-      $('f-ok-txt').textContent=(hasEmail && !demo)?'Nos pondremos en contacto contigo lo antes posible. Te hemos enviado un correo para confirmarte que lo hemos recibido.':'Nos pondremos en contacto contigo lo antes posible.';
+      $('f-ok-txt').textContent=hasEmail?'Nos pondremos en contacto contigo lo antes posible.':'Te llamaremos o te escribiremos por WhatsApp lo antes posible.';
+      $('f-ok-spam').hidden=!(hasEmail && !demo);
       try{ okBox.scrollIntoView({block:'center',behavior:'smooth'}); }catch(e){}
     }
     $('f-again').addEventListener('click',function(){

@@ -251,6 +251,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 
 .fok{text-align:center;padding:26px 6px}
 .tick{width:58px;height:58px;border-radius:50%;background:#e3f5ee;color:var(--ok);display:grid;place-items:center;font-size:28px;margin:0 auto 16px}
 .fok p{color:var(--muted);margin-top:8px}
+.fok .fspam{margin:16px auto 0;max-width:440px;background:#eef4ff;border:1px solid #cddcfb;color:var(--text);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.5}
 
 /* contacto */
 .contact{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
@@ -278,6 +279,15 @@ footer img{height:46px;width:auto}
 .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:#128c4b;color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:13px 18px;border-radius:999px;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:transform .16s var(--ease-out),opacity .2s ease}
 @media (hover:hover) and (pointer:fine){.wa:hover,.qa-fab:hover{transform:translateY(-2px)}}
 .wa svg{width:20px;height:20px}
+.wa{border:0;font-family:inherit;cursor:pointer}
+.wa-menu{position:fixed;right:18px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:46;width:260px;background:#fff;color:var(--text);border-radius:16px;padding:12px;box-shadow:0 24px 60px -18px rgba(10,15,28,.45),0 0 0 1px rgba(10,15,28,.06);transform-origin:100% 100%;animation:waIn .22s var(--ease-out)}
+.wa-menu small{display:block;font-size:12.5px;color:var(--muted);padding:2px 6px 8px}
+.wa-menu a{display:flex;align-items:center;gap:10px;padding:12px 10px;border-radius:10px;color:var(--text);text-decoration:none;font-weight:600;font-size:15.5px;font-variant-numeric:tabular-nums;transition:background-color .15s ease}
+.wa-menu a svg{width:20px;height:20px;color:#128c4b;flex:none}
+@media (hover:hover) and (pointer:fine){.wa-menu a:hover{background:#eef7f1}}
+@keyframes waIn{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.wa-menu{animation:none}}
+
 
 /* preguntas automáticas */
 .qa-fab{position:fixed;right:18px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:41;display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:1px solid rgba(255,255,255,.14);font:inherit;font-weight:600;font-size:15px;padding:13px 18px;border-radius:999px;cursor:pointer;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:transform .16s var(--ease-out),opacity .2s ease}
@@ -621,8 +631,9 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
         </form>
         <div class="fok" id="f-ok" hidden>
           <div class="tick" aria-hidden="true">✓</div>
-          <h3>Gracias, lo hemos recibido</h3>
+          <h3>¡Gracias, lo hemos recibido!</h3>
           <p id="f-ok-txt">Nos pondremos en contacto contigo lo antes posible.</p>
+          <p class="fspam" id="f-ok-spam" hidden>📩 También te hemos enviado un correo de confirmación. Si en unos minutos no lo ves en tu bandeja de entrada, <b>revisa la carpeta de spam o correo no deseado</b>, a veces llega ahí.</p>
           <p class="demo" id="f-ok-demo" hidden>Modo de prueba: no se ha enviado nada todavía.</p>
           <button type="button" class="btn sec sm" id="f-again" style="margin-top:18px">Enviar otro mensaje</button>
         </div>
@@ -675,7 +686,7 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
   <form class="qa-f" id="qaF" autocomplete="off"><label class="sr" for="qaIn">Escribe tu pregunta</label><input id="qaIn" type="text" maxlength="200" placeholder="Escribe tu pregunta…"><button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form>
 </div>
 <div class="toast" id="toast" role="status" hidden></div>
-<a class="wa" href="https://wa.me/34642643134" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 18.200a8.200 8.200 0 0 1-4.200-1.150l-.3-.18-3 .78.800-2.900-.2-.300A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.25-.120-1.450-.720-1.680-.800-.220-.080-.390-.120-.550.120-.160.250-.630.800-.780.960-.140.160-.290.180-.530.060-.250-.120-1.040-.380-1.980-1.220-.730-.650-1.230-1.460-1.370-1.700-.140-.250-.020-.380.110-.500.110-.110.250-.290.370-.430.120-.140.160-.250.250-.410.080-.160.040-.310-.020-.430-.060-.120-.550-1.330-.760-1.820-.200-.480-.400-.410-.550-.420h-.470c-.160 0-.430.060-.650.310-.220.250-.860.840-.860 2.050s.880 2.380 1 2.540c.120.160 1.730 2.640 4.190 3.700.590.250 1.040.400 1.400.520.590.190 1.120.160 1.540.100.470-.070 1.450-.590 1.650-1.170.200-.570.200-1.060.140-1.170-.060-.100-.220-.160-.470-.290z"/></svg><span>WhatsApp</span></a>
+<div class="wa-wrap"><div class="wa-menu" id="wa-menu" hidden><small>¿Con quién quieres hablar?</small><a href="https://wa.me/34642643134" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 18.200a8.200 8.200 0 0 1-4.200-1.150l-.3-.18-3 .78.800-2.900-.2-.300A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.25-.120-1.450-.720-1.680-.800-.220-.080-.390-.120-.550.120-.160.250-.630.800-.780.960-.140.160-.290.180-.530.060-.250-.120-1.040-.380-1.980-1.220-.730-.650-1.230-1.460-1.370-1.700-.140-.250-.020-.380.110-.500.110-.110.250-.290.370-.430.120-.140.160-.250.250-.410.080-.160.040-.310-.020-.430-.060-.120-.550-1.330-.760-1.820-.200-.480-.400-.410-.550-.420h-.470c-.160 0-.430.060-.650.310-.220.250-.860.840-.860 2.050s.880 2.380 1 2.540c.120.160 1.730 2.640 4.190 3.700.590.250 1.040.400 1.400.520.590.190 1.120.160 1.540.100.470-.070 1.450-.590 1.650-1.170.200-.570.200-1.060.140-1.170-.060-.100-.220-.160-.470-.290z"/></svg><span>+34 642 64 31 34</span></a><a href="https://wa.me/34657719647" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 18.200a8.200 8.200 0 0 1-4.200-1.150l-.3-.18-3 .78.800-2.900-.2-.300A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.25-.120-1.450-.720-1.680-.800-.220-.080-.390-.120-.550.120-.160.250-.630.800-.780.960-.140.160-.290.180-.530.060-.250-.120-1.040-.380-1.980-1.220-.730-.650-1.230-1.460-1.370-1.700-.140-.250-.020-.380.110-.500.110-.110.250-.290.370-.430.120-.140.160-.250.250-.410.080-.160.040-.310-.020-.430-.060-.120-.550-1.330-.760-1.820-.200-.480-.400-.410-.550-.420h-.470c-.160 0-.430.060-.650.310-.220.250-.860.840-.860 2.050s.880 2.380 1 2.540c.120.160 1.730 2.640 4.190 3.700.590.250 1.040.400 1.400.520.590.190 1.120.160 1.540.100.470-.070 1.450-.590 1.650-1.170.200-.570.200-1.060.140-1.170-.060-.100-.220-.160-.470-.290z"/></svg><span>+34 657 71 96 47</span></a></div><button type="button" class="wa" id="wa-btn" aria-expanded="false" aria-controls="wa-menu" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 18.200a8.200 8.200 0 0 1-4.200-1.150l-.3-.18-3 .78.800-2.900-.2-.300A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.25-.120-1.450-.720-1.680-.800-.220-.080-.390-.120-.550.120-.160.250-.630.800-.780.960-.140.160-.290.180-.530.060-.250-.120-1.040-.380-1.980-1.220-.730-.650-1.230-1.460-1.370-1.700-.140-.250-.020-.380.110-.500.110-.110.250-.290.370-.430.120-.140.160-.250.250-.410.080-.160.040-.310-.020-.430-.060-.120-.550-1.330-.760-1.820-.200-.480-.400-.410-.550-.420h-.470c-.160 0-.430.060-.650.310-.220.250-.860.840-.860 2.050s.880 2.380 1 2.540c.120.160 1.730 2.640 4.190 3.700.590.250 1.040.400 1.400.520.590.190 1.120.160 1.540.100.470-.070 1.450-.590 1.650-1.170.200-.570.200-1.060.140-1.170-.060-.100-.220-.160-.470-.290z"/></svg><span>WhatsApp</span></button></div>
 
 <div id="cookie" class="cookie" role="dialog" aria-label="Aviso de cookies" hidden>
   <p>Usamos cookies técnicas para que la web funcione y, solo si tú nos lo permites, otras de análisis o marketing. Puedes aceptarlas, rechazarlas o elegir cuáles. Más información en la <a href="#" data-legal="cookies">política de cookies</a>.</p>
