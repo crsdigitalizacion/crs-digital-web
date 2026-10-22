@@ -123,7 +123,7 @@
       document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))set(false);});
       document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
       [].forEach.call(m.querySelectorAll('a'),function(a){a.addEventListener('click',function(){set(false);});});})();
-    var WA={t:'WhatsApp 642 64 31 34',h:'https://wa.me/34642643134'},WA2={t:'WhatsApp 657 71 96 47',h:'https://wa.me/34657719647'},FORM={t:'Ir al formulario',h:'#formulario'},WORK={t:'Ver trabajos',h:'#proyectos'},SVC={t:'Ver servicios',h:'#servicios'};
+    var WA={t:'WhatsApp 642 64 31 34',h:'https://wa.me/34642643134?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20me%20interesa%20una%20p%C3%A1gina%20para%20mi%20negocio.'},WA2={t:'WhatsApp 657 71 96 47',h:'https://wa.me/34657719647?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20me%20interesa%20una%20p%C3%A1gina%20para%20mi%20negocio.'},FORM={t:'Ir al formulario',h:'#formulario'},WORK={t:'Ver trabajos',h:'#proyectos'},SVC={t:'Ver servicios',h:'#servicios'};
     var K=[
       {k:['hola','buenas','buenos dias','buenas tardes','hey'],a:'Hola. Pregúntame lo que quieras sobre webs, redes sociales, automatización o mantenimiento, o elige una de las preguntas de abajo.'},
       {k:['precio','precios','cuesta','cuanto vale','cuanto cobr','presupuesto','tarifa','caro','barato','pagar','coste','dinero'],a:'Cada negocio necesita algo distinto, así que preparamos un presupuesto a medida y sin compromiso. Cuéntanos qué necesitas en el formulario o por WhatsApp y te respondemos.',x:[FORM,WA]},
