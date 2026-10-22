@@ -477,3 +477,9 @@
   if(reduce){ if(!bgOff){ render3D(0,0,0); mascot(0,0,1); } }
   else { requestAnimationFrame(frame); }
 })();
+
+/* borrar los datos guardados en este navegador (elección de cookies y cookies de análisis/marketing) */
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-wipe]');if(!b)return;e.preventDefault();
+ try{localStorage.removeItem('crs_consent_v1');}catch(x){}
+ try{document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(/^(_ga|_gid|_gat|_fbp|_fbc)/.test(n)){var h=location.hostname,parts=h.split('.');for(var i=0;i<parts.length;i++){var d=parts.slice(i).join('.');document.cookie=n+'=; Max-Age=0; path=/; domain=.'+d;document.cookie=n+'=; Max-Age=0; path=/; domain='+d;}document.cookie=n+'=; Max-Age=0; path=/';}});}catch(x){}
+ b.textContent='Hecho: tus datos de este navegador se han borrado';setTimeout(function(){location.reload();},1200);});

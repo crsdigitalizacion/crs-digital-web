@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://challenges.cloudflare.com https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://challenges.cloudflare.com https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -31,9 +31,7 @@
 
 <meta name="description" content="Diseñamos tu web, gestionamos tus redes sociales, automatizamos tareas y nos ocupamos del mantenimiento. CRS Digital: webs y redes para negocios que quieren llegar más lejos.">
 <meta name="theme-color" content="#0a0f1c">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 /* Layout: portada y pie en tinta oscura (la marca), contenido en papel blanco con bandas gris frío; una sola columna ancha de 1160px. */
@@ -447,6 +445,15 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
  .eqbg .team{min-height:auto;padding-top:20px;padding-bottom:38vw}
  .eqbg .points li{text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 14px rgba(0,0,0,.8)}
 }
+/* legal */
+.lgbtn{display:inline-flex;margin:4px 0 8px;text-decoration:none}
+.lg .btn.sec{border:1px solid currentColor;background:transparent;cursor:pointer;font:inherit;font-weight:600;padding:12px 18px;border-radius:999px}
+.pinfo{margin-top:14px;padding:14px 16px;border:1px solid var(--line,#dfe3ea);border-radius:12px;font-size:13px;line-height:1.5;color:var(--muted,#5b6475)}
+.pinfo b{display:block;margin-bottom:6px;color:inherit;font-size:13px}
+.pinfo dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:0 0 6px}
+.pinfo dt{font-weight:600}.pinfo dd{margin:0}
+.pjtag{display:inline-block;margin:14px 0 -4px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted,#5b6475)}
+.pjtag.real{color:var(--accent,#1f6fff)}
 </style>
 </head>
 <body>
@@ -548,16 +555,16 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
     <div class="wrap">
       <div class="eyebrow rv">Trabajos</div>
       <h2 class="rv split" style="--d:.05s">Algunos de nuestros trabajos.</h2>
-      <p class="lead rv" style="--d:.1s">Cuatro webs reales en sectores distintos. Toca cualquier móvil para abrirla y verla por dentro.</p>
+      <p class="lead rv" style="--d:.1s">Un proyecto para un cliente real y tres diseños de muestra para distintos sectores. Toca cualquier móvil para abrirla y verla por dentro.</p>
       <div class="proj">
         <div class="pj rv"><a class="pjl" href="https://andresjunie2003-droid.github.io/pizzeria-arancha/" target="_blank" rel="noopener" aria-label="Abrir la web de Pizzeria Arancha en una pestaña nueva"><div class="par" data-speed="-.05"><div class="phone tiltable"><img loading="lazy" decoding="async" src="img/46cb14381b03.webp" alt="Captura de la web de pizzería Pizzeria Arancha en el móvil"></div></div></a>
-          <h3>Pizzeria Arancha</h3><p>Web para pizzería con carta, pedidos y llamada en un toque.</p><a class="go" href="https://andresjunie2003-droid.github.io/pizzeria-arancha/" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
+          <span class="pjtag">Diseño de muestra</span><h3>Pizzeria Arancha</h3><p>Web para pizzería con carta, pedidos y llamada en un toque.</p><a class="go" href="https://andresjunie2003-droid.github.io/pizzeria-arancha/" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
         <div class="pj rv" style="--d:.08s"><a class="pjl" href="https://andresjunie2003-droid.github.io/Black-crown-barbers/" target="_blank" rel="noopener" aria-label="Abrir la web de Black Crown Barbers en una pestaña nueva"><div class="par" data-speed=".05"><div class="phone tiltable"><img loading="lazy" decoding="async" src="img/7724b5cef878.webp" alt="Captura de la web de barbería Black Crown Barbers en el móvil"></div></div></a>
-          <h3>Black Crown Barbers</h3><p>Barbería premium con reserva de cita, valoraciones y estilo propio.</p><a class="go" href="https://andresjunie2003-droid.github.io/Black-crown-barbers/" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
+          <span class="pjtag">Diseño de muestra</span><h3>Black Crown Barbers</h3><p>Barbería premium con reserva de cita, valoraciones y estilo propio.</p><a class="go" href="https://andresjunie2003-droid.github.io/Black-crown-barbers/" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
         <div class="pj rv" style="--d:.16s"><a class="pjl" href="https://andresjunie2003-droid.github.io/fisioterapia-san-juan/" target="_blank" rel="noopener" aria-label="Abrir la web de Fisioterapia San Juan en una pestaña nueva"><div class="par" data-speed="-.05"><div class="phone tiltable"><img loading="lazy" decoding="async" src="img/6ca615883d33.webp" alt="Captura de la web de centro Fisioterapia San Juan en el móvil"></div></div></a>
-          <h3>Fisioterapia San Juan</h3><p>Centro de fisioterapia en Logroño con cita online y atención cercana.</p><a class="go" href="https://andresjunie2003-droid.github.io/fisioterapia-san-juan/" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
+          <span class="pjtag">Diseño de muestra</span><h3>Fisioterapia San Juan</h3><p>Centro de fisioterapia en Logroño con cita online y atención cercana.</p><a class="go" href="https://andresjunie2003-droid.github.io/fisioterapia-san-juan/" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
         <div class="pj rv" style="--d:.24s"><a class="pjl" href="https://middlemanarchives.netlify.app" target="_blank" rel="noopener" aria-label="Abrir la web de Middleman Archives en una pestaña nueva"><div class="par" data-speed=".05"><div class="phone tiltable"><img loading="lazy" decoding="async" src="img/3a77c9769758.webp" alt="Captura de la web de tienda de ropa Middleman Archives en el móvil"></div></div></a>
-          <h3>Middleman Archives</h3><p>Tienda online de ropa para el lanzamiento y la reserva de una camiseta.</p><a class="go" href="https://middlemanarchives.netlify.app" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
+          <span class="pjtag real">Cliente</span><h3>Middleman Archives</h3><p>Tienda online de ropa para el lanzamiento y la reserva de una camiseta.</p><a class="go" href="https://middlemanarchives.netlify.app" target="_blank" rel="noopener">Ver la web <span aria-hidden="true">↗</span></a></div>
       </div>
       <ul class="feats">
         <li class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3.500-1L18 8.500a2 2 0 0 0 0-2.800L17.300 5a2 2 0 0 0-2.800 0L3 16.500z"/><path d="M13.500 6.500l3 3"/></svg><b>Diseño adaptado a ti</b>Cada proyecto parte de tus necesidades, estilo y objetivos.</li>
@@ -643,7 +650,7 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
               </div>
             </div>
             <div class="fld full" data-f="message"><label for="f-msg">Cuéntanos qué buscas <em>(opcional)</em></label><textarea id="f-msg" maxlength="1500" placeholder="Cuéntanos con tus palabras qué necesitas o qué te gustaría mejorar."></textarea><span class="ferr"></span></div>
-            <div class="fld full" data-f="consent"><label class="consent"><input type="checkbox" id="f-consent"><span>He leído y acepto la <a href="#" data-legal="privacidad">política de privacidad</a>. Consiento que CRS Digital use estos datos para responder a mi consulta.</span></label><span class="ferr" aria-live="polite"></span></div>
+            <div class="fld full" data-f="consent"><label class="consent"><input type="checkbox" id="f-consent"><span>He leído y acepto la <a href="#" data-legal="privacidad">política de privacidad</a>. Consiento que CRS Digital use estos datos para responder a mi consulta.</span></label><div class="pinfo"><b>Información básica sobre protección de datos</b><dl><dt>Responsable</dt><dd>CRS Digital (ver <a href="#" data-legal="aviso">aviso legal</a>)</dd><dt>Finalidad</dt><dd>Responder a tu consulta y, si nos lo pides, enviarte un presupuesto</dd><dt>Legitimación</dt><dd>Tu consentimiento</dd><dt>Destinatarios</dt><dd>No se ceden a terceros; usamos proveedores como Google y Cloudflare</dd><dt>Derechos</dt><dd>Acceder, rectificar y <a href="#" data-legal="borrar">borrar tus datos</a>, entre otros</dd></dl><span>Más información en la <a href="#" data-legal="privacidad">política de privacidad</a>.</span></div><span class="ferr" aria-live="polite"></span></div>
             <div class="hp" aria-hidden="true"><label>No rellenes este campo<input id="f-web" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div id="ts-box" class="full"></div>
           </div>
@@ -692,7 +699,7 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
     </div>
     <div class="fl">
       <nav class="flinks" aria-label="Información legal">
-        <a href="#" data-legal="aviso">Aviso legal</a><a href="#" data-legal="privacidad">Política de privacidad</a><a href="#" data-legal="cookies">Política de cookies</a><button type="button" data-prefs>Configurar cookies</button>
+        <a href="#" data-legal="aviso">Aviso legal</a><a href="#" data-legal="privacidad">Política de privacidad</a><a href="#" data-legal="cookies">Política de cookies</a><a href="#" data-legal="condiciones">Términos y condiciones</a><a href="#" data-legal="borrar">Borrar mis datos</a><button type="button" data-prefs>Configurar cookies</button>
       </nav>
       <span>© 2026 CRS Digital · Logroño, La Rioja</span>
     </div>
@@ -770,7 +777,7 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
       <ul>
         <li><b>Formulario de contacto de la web:</b> tu nombre, correo electrónico y/o teléfono (según lo que nos facilites), tipo de negocio, servicios que te interesan, tu mensaje y la fecha y hora en que aceptaste esta política.</li>
         <li><b>Contacto por otros medios</b> (teléfono, WhatsApp, correo, Instagram o TikTok): los datos que nos facilites en la conversación.</li>
-        <li><b>Datos técnicos:</b> el proveedor que aloja la web (Netlify) y el sistema antispam del formulario (Cloudflare) pueden registrar tu dirección IP, el tipo de navegador y la fecha y hora de acceso.</li>
+        <li><b>Datos técnicos:</b> el proveedor que aloja la web (GitHub Pages) y el sistema antispam del formulario (Cloudflare) pueden registrar tu dirección IP, el tipo de navegador y la fecha y hora de acceso.</li>
         <li><b>Datos de uso y publicidad</b>, solo si aceptas las cookies de análisis o de marketing (ver la política de cookies).</li>
       </ul>
       <p>Esta web no crea cuentas de usuario.</p>
@@ -791,13 +798,14 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
       <p>No cedemos tus datos a terceros salvo obligación legal. Para prestar el servicio utilizamos proveedores que acceden a los datos como encargados del tratamiento:</p>
       <ul>
         <li><b>Google</b> (Gmail, Google Sheets, Google Apps Script): recibimos los mensajes del formulario, los registramos en una hoja de cálculo y enviamos las respuestas. Si aceptas las cookies de análisis, también Google Analytics.</li>
-        <li><b>Netlify</b>: aloja la web y, como cualquier servidor, registra datos técnicos de las visitas (dirección IP, navegador, fecha y hora) por seguridad.</li>
+        <li><b>GitHub</b> (GitHub Pages, de GitHub, Inc.): aloja la web y, como cualquier servidor, registra datos técnicos de las visitas (dirección IP, navegador, fecha y hora) por seguridad.</li>
         <li><b>Cloudflare</b>: protege el formulario frente a spam (Turnstile).</li>
         <li><b>Meta</b> (WhatsApp, Instagram y, si aceptas las cookies de marketing, el Píxel de Meta) y <b>TikTok</b>, si contactas con nosotros a través de ellos. En el caso del Píxel de Meta, Meta y CRS Digital pueden actuar como corresponsables del tratamiento.</li>
       </ul>
       <p>Algunos de estos proveedores están situados fuera del Espacio Económico Europeo; en tal caso, las transferencias se apoyan en las garantías previstas en el RGPD (decisiones de adecuación, como el Marco de Privacidad de Datos UE-EE. UU., o cláusulas contractuales tipo).</p>
       <h4>6. Tus derechos</h4>
       <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, y retirar tu consentimiento en cualquier momento, escribiendo a <a href="mailto:crsdigitalizacion@gmail.com">crsdigitalizacion@gmail.com</a> e indicando el derecho que deseas ejercer y acreditando tu identidad. Puedes cambiar tus preferencias de cookies cuando quieras con el botón «Configurar cookies» del pie de página.</p>
+      <p>Para pedirnos que borremos tus datos, usa el apartado <a href="#" data-legal="borrar">Borrar mis datos</a>, donde tienes un botón que prepara el correo por ti.</p>
       <p>Si consideras que no hemos tratado tus datos correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
       <h4>7. Menores de edad</h4>
       <p>Nuestros servicios se dirigen a profesionales y empresas. No tratamos de forma consciente datos personales de menores de 14 años.</p>
@@ -822,12 +830,55 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
       </table></div>
       <p><b>Las cookies de análisis y de marketing solo se instalan si las aceptas.</b> Hasta entonces, esta web solo utiliza el almacenamiento técnico que guarda tu elección.</p>
       <h4>3. Recursos de terceros que carga la web</h4>
-      <p>Para mostrarse correctamente, la web carga las tipografías desde Google Fonts (Google). La librería de gráficos 3D está alojada en nuestra propia web. Cuando empiezas a rellenar el formulario, se carga Cloudflare Turnstile para distinguir a las personas de los robots; es un servicio de seguridad necesario para enviar el formulario y no se usa con fines publicitarios. Estas peticiones pueden comunicar tu dirección IP a dichos proveedores. Si aceptas las cookies correspondientes, también se cargarán Google Analytics (Google) y el Píxel de Meta (Meta). Los enlaces a Instagram, TikTok y WhatsApp solo te llevan a esas plataformas cuando pulsas sobre ellos, y allí se aplican sus propias políticas.</p>
+      <p>Las tipografías y el resto de recursos de diseño están alojados en nuestra propia web, por lo que no se descargan de servidores de terceros. Cuando empiezas a rellenar el formulario, se carga Cloudflare Turnstile para distinguir a las personas de los robots; es un servicio de seguridad necesario para enviar el formulario y no se usa con fines publicitarios. Estas peticiones pueden comunicar tu dirección IP a dichos proveedores. Si aceptas las cookies correspondientes, también se cargarán Google Analytics (Google) y el Píxel de Meta (Meta). Los enlaces a Instagram, TikTok y WhatsApp solo te llevan a esas plataformas cuando pulsas sobre ellos, y allí se aplican sus propias políticas.</p>
       <h4>4. Cómo gestionar o retirar tu consentimiento</h4>
       <p>Puedes cambiar tu elección en cualquier momento con el botón «Configurar cookies» del pie de página. También puedes borrar o bloquear las cookies y los datos del sitio desde los ajustes de tu navegador (Chrome, Safari, Firefox, Edge…).</p>
       <h4>5. Cambios en esta política</h4>
       <p>Si incorporamos nuevas cookies o herramientas, actualizaremos esta política y, cuando la ley lo exija, te pediremos permiso antes de activarlas.</p>
     </section>
+
+    <section class="lg" data-doc="condiciones" hidden>
+      <h3>Términos y condiciones</h3>
+      <p class="upd">Última actualización: octubre de 2026</p>
+      <p>Estas condiciones regulan la contratación de los servicios de CRS Digital (diseño web, gestión de redes sociales, automatización y mantenimiento). Los datos de los titulares figuran en el <a href="#" data-legal="aviso">aviso legal</a>. Lo que se acuerde por escrito en cada presupuesto prevalece sobre estas condiciones generales.</p>
+      <h4>1. Presupuesto y contratación</h4>
+      <p>Antes de empezar te enviamos un presupuesto por escrito con el alcance del trabajo, el precio, los plazos estimados y la forma de pago. El contrato se entiende celebrado cuando aceptas el presupuesto por escrito (por ejemplo, por correo electrónico o WhatsApp). Los presupuestos son válidos durante 30 días salvo que indiquen otra cosa.</p>
+      <h4>2. Precios y pago</h4>
+      <p>Los precios son los indicados en el presupuesto, que especificará si incluyen o no los impuestos aplicables. La forma y los plazos de pago se fijan en cada presupuesto. Los gastos de terceros (dominio, alojamiento, licencias, publicidad u otros servicios externos) no están incluidos salvo que el presupuesto diga lo contrario.</p>
+      <h4>3. Colaboración del cliente</h4>
+      <p>Para cumplir los plazos necesitamos que nos facilites a tiempo los textos, imágenes, logotipos, accesos y demás información necesaria. Garantizas que tienes los derechos sobre el material que nos entregas y que su uso no vulnera derechos de terceros. Los retrasos en la entrega de este material pueden mover los plazos.</p>
+      <h4>4. Plazos, revisiones y entrega</h4>
+      <p>Los plazos son estimados y se cuentan desde que tenemos todo el material necesario. El presupuesto indicará cuántas rondas de cambios incluye; los cambios adicionales o las funciones nuevas que no estaban en el presupuesto se presupuestarán aparte. El trabajo se considera entregado cuando lo publicamos o te lo entregamos y lo das por bueno, o cuando no comunicas incidencias en los 15 días siguientes a la entrega.</p>
+      <h4>5. Propiedad intelectual</h4>
+      <p>Una vez pagado el precio completo, te cedemos los derechos de uso, reproducción y modificación necesarios para utilizar el trabajo final en tu negocio. Los elementos de terceros (tipografías, librerías de código, imágenes de bancos de imágenes, plantillas o plugins) se rigen por sus propias licencias. CRS Digital podrá mostrar el trabajo realizado en su web y redes como ejemplo de su actividad, salvo que nos pidas lo contrario.</p>
+      <h4>6. Dominio, alojamiento y cuentas</h4>
+      <p>Siempre que sea posible, el dominio, el alojamiento y las cuentas de redes sociales estarán a tu nombre. Si los contratamos nosotros por cuenta tuya, te facilitaremos los accesos cuando lo solicites y una vez abonados los importes pendientes.</p>
+      <h4>7. Mantenimiento y gestión de redes</h4>
+      <p>El mantenimiento y la gestión de redes sociales son servicios periódicos que se contratan aparte. Su contenido, precio y duración se indicarán en el presupuesto. Salvo que se acuerde otra cosa, puedes darlos de baja comunicándolo por escrito con al menos 15 días de antelación al siguiente periodo.</p>
+      <h4>8. Garantía y responsabilidad</h4>
+      <p>Corregiremos sin coste los errores de funcionamiento atribuibles a nuestro trabajo que nos comuniques durante el periodo indicado en el presupuesto. No respondemos de fallos causados por servicios de terceros (alojamiento, plataformas de pago, redes sociales, cambios de sus normas o algoritmos), por modificaciones hechas por otras personas ni por un uso indebido. No garantizamos resultados concretos de posicionamiento, visitas, seguidores o ventas.</p>
+      <h4>9. Cancelación y desistimiento</h4>
+      <p>Si cancelas un proyecto ya iniciado, se abonará la parte del trabajo realizada hasta ese momento. Si contratas como consumidor a distancia, tienes derecho a desistir en un plazo de 14 días naturales desde la contratación; si nos pides expresamente empezar antes de que termine ese plazo, deberás abonar la parte proporcional del servicio ya prestado, y perderás el derecho de desistimiento una vez el servicio esté completamente ejecutado.</p>
+      <h4>10. Protección de datos</h4>
+      <p>Tratamos tus datos según nuestra <a href="#" data-legal="privacidad">política de privacidad</a>. Si para prestar el servicio debemos acceder a datos personales de tus clientes o usuarios, firmaremos contigo el correspondiente contrato de encargo del tratamiento (art. 28 RGPD).</p>
+      <h4>11. Cambios, ley aplicable y reclamaciones</h4>
+      <p>Podemos actualizar estas condiciones; a cada contrato se le aplicará la versión vigente en el momento de aceptar el presupuesto. Se rigen por la legislación española. Si contratas como consumidor, serán competentes los juzgados de tu domicilio. Puedes enviarnos cualquier queja o reclamación a <a href="mailto:crsdigitalizacion@gmail.com">crsdigitalizacion@gmail.com</a>.</p>
+    </section>
+
+    <section class="lg" data-doc="borrar" hidden>
+      <h3>Borrar mis datos</h3>
+      <p class="upd">Última actualización: octubre de 2026</p>
+      <p>Puedes pedirnos en cualquier momento que borremos los datos personales que tengamos sobre ti (por ejemplo, los que nos enviaste por el formulario, correo o WhatsApp). Es gratuito y te responderemos en un plazo máximo de un mes.</p>
+      <h4>1. Datos que tenemos nosotros</h4>
+      <p>Pulsa el botón y se abrirá un correo ya preparado. Solo tienes que completar tu nombre y el correo o teléfono con el que contactaste, y enviarlo. Si no se abre tu programa de correo, escríbenos a <a href="mailto:crsdigitalizacion@gmail.com">crsdigitalizacion@gmail.com</a> con el asunto «Solicitud de supresión de mis datos personales».</p>
+      <p><a class="btn pri lgbtn" href="mailto:crsdigitalizacion@gmail.com?subject=Solicitud%20de%20supresi%C3%B3n%20de%20mis%20datos%20personales&body=Hola%2C%20CRS%20Digital%3A%0A%0ASolicito%20la%20supresi%C3%B3n%20de%20mis%20datos%20personales%20%28derecho%20de%20supresi%C3%B3n%2C%20art.%2017%20RGPD%29.%0A%0ANombre%3A%0ACorreo%20electr%C3%B3nico%20y/o%20tel%C3%A9fono%20con%20el%20que%20contact%C3%A9%3A%0A%0AGracias.">Solicitar el borrado de mis datos</a></p>
+      <p>Podemos pedirte que confirmes tu identidad para evitar que otra persona solicite el borrado en tu nombre. Solo conservaremos, bloqueados, los datos que la ley nos obligue a guardar (por ejemplo, facturas).</p>
+      <h4>2. Datos guardados en este navegador</h4>
+      <p>Esta web solo guarda en tu navegador tu elección sobre las cookies. Si aceptaste las cookies de análisis o marketing, también puede haber cookies de Google o Meta. Con este botón borramos tu elección y esas cookies de este dispositivo, y la web volverá a preguntarte.</p>
+      <p><button type="button" class="btn sec lgbtn" data-wipe>Borrar mis datos de este navegador</button></p>
+      <p>También puedes ejercer tus derechos de acceso, rectificación, oposición, limitación y portabilidad escribiendo al mismo correo. Más información en la <a href="#" data-legal="privacidad">política de privacidad</a>.</p>
+    </section>
+
   </div>
 </div>
 
