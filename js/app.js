@@ -468,11 +468,12 @@
     if(now-lastPtr>2500){ tx=Math.sin(t*.45)*.55; ty=Math.cos(t*.37)*.35; }   // movimiento suave si no hay cursor o dedo
     var mx=spX.step(tx,dt), my=spY.step(ty,dt);
     var sc=spS.step(1-.45*smooth(sy/(innerHeight*.8)),dt); if(spS.x===0) spS.x=1;
-    if(heroOn){ render3D(t,mx,my); mascot(mx,my,sc); }
+    if(heroOn&&!bgOff){ render3D(t,mx,my); mascot(mx,my,sc); }
     requestAnimationFrame(frame);
   }
-  if(!setupGL()) setup2D();
+  var bgOff=!canvas||getComputedStyle(canvas).display==='none';   // la portada usa imagen de fondo: no se dibujan partículas
+  if(!bgOff){ if(!setupGL()) setup2D(); }
   spS.x=1; resize();
-  if(reduce){ render3D(0,0,0); mascot(0,0,1); }
+  if(reduce){ if(!bgOff){ render3D(0,0,0); mascot(0,0,1); } }
   else { requestAnimationFrame(frame); }
 })();
