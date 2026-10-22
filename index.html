@@ -436,6 +436,17 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
  .hero .facts li{color:#e8ecf4;text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 14px rgba(0,0,0,.8)}
  .hero-in{grid-template-columns:1fr;min-height:auto;padding-bottom:64vw}
 }
+/* equipo con imagen de fondo */
+.eqbg{position:relative;overflow:hidden;background:#0b0907}
+.eqbg .ebg{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(8,7,6,.94) 0%,rgba(8,7,6,.82) 34%,rgba(8,7,6,.3) 58%,rgba(8,7,6,0) 74%),url(equipo-h.webp) right center/cover no-repeat}
+.eqbg>.wrap{position:relative;z-index:1}
+.eqbg .team{grid-template-columns:minmax(0,560px);gap:36px;min-height:620px;align-content:center}
+.eqbg .points li{text-shadow:0 1px 3px rgba(0,0,0,.6)}
+@media (max-width:1000px){
+ .eqbg .ebg{background:linear-gradient(180deg,#0b0907 0%,rgba(11,9,7,.75) 12%,rgba(11,9,7,.45) 35%,rgba(11,9,7,.25) 52%,rgba(11,9,7,0) 62%) center bottom/100% 177.7vw no-repeat,#0b0907 url(equipo-v.webp) center bottom/100% auto no-repeat}
+ .eqbg .team{min-height:auto;padding-top:20px;padding-bottom:38vw}
+ .eqbg .points li{text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 14px rgba(0,0,0,.8)}
+}
 </style>
 </head>
 <body>
@@ -557,7 +568,8 @@ mark,.pend{background:#fff1b8;color:#4a3a00;padding:1px 4px;border-radius:3px}
     </div>
   </section>
 
-  <section class="dark" id="equipo" data-tone="dark" data-pad="170">
+  <section class="dark eqbg" id="equipo" data-tone="dark" data-pad="170">
+    <div class="ebg" aria-hidden="true"></div>
     <div class="wrap team">
       <div>
         <div class="eyebrow rv">Cerca de ti, estés donde estés</div>
