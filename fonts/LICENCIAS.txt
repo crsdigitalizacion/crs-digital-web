@@ -1,0 +1,7 @@
+Tipografías alojadas en esta web
+
+- Schibsted Grotesk (Schibsted) — SIL Open Font License 1.1
+- IBM Plex Sans e IBM Plex Mono (IBM) — SIL Open Font License 1.1
+
+Las tres permiten su uso comercial, incluido en webs, y su redistribución
+junto con la web. Texto completo de la licencia: https://openfontlicense.org
