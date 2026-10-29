@@ -857,6 +857,8 @@ main{display:block;background:var(--paper)}
 .legal th{background:var(--mist);font-weight:600}
 .legal .btn,.legal button{margin:6px 0 14px}
 .legal button.lbtn,.legal a.lbtn{display:inline-flex;align-items:center;height:46px;padding:0 18px;border-radius:var(--r-btn);background:var(--blue);color:#fff;border:0;font:600 15px/1 var(--f-body);text-decoration:none;cursor:pointer}
+/* titular de portada: que «desapercibida.» quepa entera en móviles estrechos */
+@media (max-width:480px){.h2t h1{font-size:min(52px,13.2vw)}}
 /* pie */
 footer{background:var(--ink);color:var(--on-ink-muted);border-top:1px solid var(--line-ink)}
 footer .wrap{padding-block:48px;display:flex;flex-wrap:wrap;gap:24px 40px;justify-content:space-between;align-items:center;font-size:16px}
