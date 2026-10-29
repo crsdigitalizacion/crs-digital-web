@@ -559,7 +559,7 @@ main{overflow-x:clip}
 .pb.flip .pb-dev{order:-1}
 .pb-t{display:grid;gap:14px}
 .pb-t .tag{color:inherit;opacity:.75}
-.pb h3{font-size:clamp(36px,4.8vw,64px);line-height:1}
+.pb h3,.pb h2{font-size:clamp(36px,4.8vw,64px);line-height:1}
 .pb-t p{font-size:18px;opacity:.85;max-width:40ch}
 .pb-t dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:4px 0 0;font-size:16px}
 .pb-t dt{font:500 12px/1.9 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;opacity:.7}
@@ -584,13 +584,13 @@ main{overflow-x:clip}
 /* Panadería: tonos cálidos */
 .pb-panaderia{color:#f7ecdb;background:radial-gradient(55% 70% at 30% 55%,rgba(206,140,66,.5),transparent 70%),linear-gradient(135deg,#1a110a 0%,#3a2312 55%,#5a3618 100%)}
 .pb-panaderia .tag{color:#e7bd7c;opacity:1}
-.pb-panaderia h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.01em}
+.pb-panaderia h3,.pb-panaderia h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.01em}
 .pb-panaderia .pb-link:hover{background:#e7bd7c;border-color:#e7bd7c;color:#1a110a}
 /* Middleman: contraste negro / blanco */
 .pb-middleman{background:#f3f3f1;color:#0b0b0b}
 .pb-middleman .pb-bg{top:0;bottom:0;right:0;width:56%;background:#0b0b0b}
-.pb-middleman h3{font-size:clamp(34px,4vw,56px)}
-.pb-middleman h3{text-transform:uppercase;letter-spacing:.02em}
+.pb-middleman h3,.pb-middleman h2{font-size:clamp(34px,4vw,56px)}
+.pb-middleman h3,.pb-middleman h2{text-transform:uppercase;letter-spacing:.02em}
 .pb-middleman .tag{color:#0b0b0b}
 .pb-middleman .pb-link:hover{background:#0b0b0b;color:#fff}
 .pb-middleman .laptop .scr,.pb-middleman .phone{border-color:#2a2a2a}
@@ -762,7 +762,7 @@ main{display:block;background:var(--paper)}
   .pb{padding-block:44px 56px}
   .pb-w{gap:14px}
   .pb-t{display:contents}
-  .pb-t .tag{order:1}.pb-t h3{order:2;font-size:clamp(32px,9vw,40px)}
+  .pb-t .tag{order:1}.pb-t h3,.pb-t h2{order:2;font-size:clamp(32px,9vw,40px)}
   .pb-dev{order:3;margin:6px 0 8px}
   .pb-t p{order:4}.pb-t dl{order:5}.pb-link{order:6}
   .pb-middleman .pb-dev{margin:6px calc(-1 * max(22px,env(safe-area-inset-right,0px))) 8px calc(-1 * max(22px,env(safe-area-inset-left,0px)))}
