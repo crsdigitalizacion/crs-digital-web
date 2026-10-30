@@ -864,6 +864,14 @@ main{display:block;background:var(--paper)}
 .greviews a{color:var(--on-ink-muted);text-decoration:underline;text-decoration-color:rgba(192,201,216,.35);text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
 .greviews a:hover{color:var(--on-ink);text-decoration-color:currentColor}
 .greviews i{font-style:normal;font-size:.85em}
+/* Middleman en ordenador: la zona negra empieza junto a los dispositivos, que quedan centrados en ella */
+@media (min-width:861px){
+  .pb-middleman .pb-bg{display:none}
+  .pb-middleman .pb-dev{padding:0 10% 7% calc(24px + 5%);--mx:calc(((100vw - min(100vw,1180px)) / 2 - 4px) / 2 - 12px)}
+  .pb-middleman .pb-dev .laptop,.pb-middleman .pb-dev .phone{translate:var(--mx) 0}
+  .pb-middleman .pb-dev::before{content:"";position:absolute;z-index:-1;top:-400px;bottom:-400px;left:-24px;right:-100vw;background:#0b0b0b}
+  .pb-middleman.flip .pb-dev::before{left:-100vw;right:-24px}
+}
 /* pie */
 footer{background:var(--ink);color:var(--on-ink-muted);border-top:1px solid var(--line-ink)}
 footer .wrap{padding-block:48px;display:flex;flex-wrap:wrap;gap:24px 40px;justify-content:space-between;align-items:center;font-size:16px}
