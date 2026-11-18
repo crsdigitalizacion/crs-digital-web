@@ -157,6 +157,25 @@
         requestAnimationFrame(frame);};
       var o=IO(function(es){vis=es[0].isIntersecting;if(vis&&!run){run=true;requestAnimationFrame(function(ts){t0=ts-el0;frame(ts);});}},{threshold:.2}); if(o)o.observe(sc);
     });
+    /* cinta de opiniones: avanza sola despacio, se para al tocarla o pasar el ratón, y se puede deslizar a mano */
+    var tr=root.querySelector('#rvw-track');
+    if(tr){
+      var row=tr.querySelector('.rvw-row'),clone=tr.querySelector('.rvw-clone'),hold=false,until=0,pos=0,last=0,vis=false;
+      var loopW=function(){return clone?clone.offsetLeft-row.firstElementChild.offsetLeft:0;};
+      var stop=function(ms){until=performance.now()+(ms||2500);};
+      tr.addEventListener('mouseenter',function(){hold=true;});tr.addEventListener('mouseleave',function(){hold=false;stop(600);});
+      tr.addEventListener('touchstart',function(){hold=true;},{passive:true});tr.addEventListener('touchend',function(){hold=false;stop(2500);},{passive:true});
+      tr.addEventListener('focusin',function(){hold=true;});tr.addEventListener('focusout',function(){hold=false;});
+      /* arrastrar con el ratón */
+      var dx=null,sl=0;
+      tr.addEventListener('mousedown',function(e){dx=e.clientX;sl=tr.scrollLeft;tr.classList.add('drag');e.preventDefault();});
+      addEventListener('mousemove',function(e){if(dx!==null)tr.scrollLeft=sl-(e.clientX-dx);});
+      addEventListener('mouseup',function(){if(dx!==null){dx=null;tr.classList.remove('drag');stop(1500);}});
+      tr.addEventListener('scroll',function(){var w=loopW();if(w>0){if(tr.scrollLeft>=w)tr.scrollLeft-=w;else if(tr.scrollLeft<=0&&!hold)tr.scrollLeft+=w;}pos=tr.scrollLeft;},{passive:true});
+      var o2=IO(function(es){vis=es[0].isIntersecting;});if(o2)o2.observe(tr);
+      if(!reduce){var step=function(ts){if(G!==S.gen)return;var dt=last?Math.min(50,ts-last):16;last=ts;
+        if(vis&&!hold&&ts>until&&dx===null&&!document.hidden){pos+=dt*0.03;tr.scrollLeft=pos;}requestAnimationFrame(step);};requestAnimationFrame(step);}
+    }
     /* formulario de contacto */
     var f=root.querySelector('#form');
     if(f){
